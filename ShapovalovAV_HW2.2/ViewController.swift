@@ -19,7 +19,6 @@ class ViewController: UIViewController {
     @IBOutlet var redSlider: UISlider!
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +26,6 @@ class ViewController: UIViewController {
         actionsWithRedSlider()
         actionsWithGreenSlider()
         actionsWithBlueSlider()
-        
-        
     }
     
     @IBAction func redSliderAction() {
@@ -43,8 +40,6 @@ class ViewController: UIViewController {
         greenValueLabel.text = String(NSString(format: "%.2f", greenSlider.value))
         viewRGB.backgroundColor = .green
         viewRGB.backgroundColor = viewRGB.backgroundColor?.withAlphaComponent(sliderValue)
-
-        
     }
     
     @IBAction func blueSliderAction() {
@@ -52,7 +47,6 @@ class ViewController: UIViewController {
         blueValueLabel.text = String(NSString(format: "%.2f", blueSlider.value))
         viewRGB.backgroundColor = .blue
         viewRGB.backgroundColor = viewRGB.backgroundColor?.withAlphaComponent(sliderValue)
-
     }
     
     private func actionsWithRedSlider() {
@@ -61,7 +55,6 @@ class ViewController: UIViewController {
         redSlider.value = 0.05
         redValueLabel.text = String(0.05)
         redSlider.maximumValue = 1
-        
     }
     
     private func actionsWithGreenSlider() {
@@ -70,7 +63,6 @@ class ViewController: UIViewController {
         greenSlider.value = 0.27
         greenValueLabel.text = String(0.27)
         greenSlider.maximumValue = 1
-        
     }
     
     private func actionsWithBlueSlider() {
@@ -79,8 +71,6 @@ class ViewController: UIViewController {
         blueSlider.value = 0.49
         blueValueLabel.text = String(0.49)
         blueSlider.maximumValue = 1
-        
     }
-    
 }
 
